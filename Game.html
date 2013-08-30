@@ -1,7 +1,7 @@
-<!DOCTYPE html>
+п»ї<!DOCTYPE html>
 <html>
 <head>
-<title>Пьяница</title>
+<title>РџСЊСЏРЅРёС†Р°</title>
 <style>
 	body
 	{
@@ -96,7 +96,7 @@
 	}
 	
 	.card_count:after {
-	content: " карт(ы)";
+	content: " РєР°СЂС‚(С‹)";
 	font-size: 18px;
 	}
 	
@@ -125,14 +125,14 @@
 <body>
 	<div id="game_begin_form">
 	<form class="game_form">
-		<label class="count_of_gamer">Количество игроков: 
+		<label class="count_of_gamer">РљРѕР»РёС‡РµСЃС‚РІРѕ РёРіСЂРѕРєРѕРІ: 
 			<select id="count_of_gamer">
 				<option>2</option>
 				<option>4</option>
 				<option>13</option>
 			</select>
 		</label>
-		<input type="button" value="Начать" class="button" id="start_button">
+		<input type="button" value="РќР°С‡Р°С‚СЊ" class="button" id="start_button">
 	</form>
 	</div>
 	<div class="gamewrap" id="game_map">
@@ -140,8 +140,8 @@
 	</div><div style="clear:both"></div>
 	<div id="game_control">
 	<form class="game_form">
-		<input type="button" value="Сделать ход" class="button" id="play_round">
-		<input type="button" value="Перезапустить игру" class="button" id="game_over">
+		<input type="button" value="РЎРґРµР»Р°С‚СЊ С…РѕРґ" class="button" id="play_round">
+		<input type="button" value="РџРµСЂРµР·Р°РїСѓСЃС‚РёС‚СЊ РёРіСЂСѓ" class="button" id="game_over">
 	</form>
 	</div>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -409,7 +409,7 @@
 		for (var i=0; i < count_of_players; i++)
 		{
 			var template = '<div class="gamer back_cards">' +
-			'<p class ="name">Игрок' + (i+1) + '</p>' + 
+			'<p class ="name">РРіСЂРѕРє' + (i+1) + '</p>' + 
 			/*'<img class ="one_card" src="'+get_card_url_by_id(players[i][0])+'"/>' +*/
 			'<span class="card_count">' + players[i].length + '</span>' +
 			'</div>';
@@ -436,7 +436,7 @@
 	}
 	function play_round()
 	{
-		//удалять классы спор и виннер, удалить спорные карты
+		//СѓРґР°Р»СЏС‚СЊ РєР»Р°СЃСЃС‹ СЃРїРѕСЂ Рё РІРёРЅРЅРµСЂ, СѓРґР°Р»РёС‚СЊ СЃРїРѕСЂРЅС‹Рµ РєР°СЂС‚С‹
 		$game_map.find('.one_card').not('.spor > .one_card').remove();
 		
 		if (card_game.spor_state == 1) 
@@ -503,7 +503,7 @@
 		else if (state[0] == "over")
 		{
 			$play_round.hide();
-			alert("Выйграл Игорк"+(state[1]+1));
+			alert("Р’С‹Р№РіСЂР°Р» РРіРѕСЂРє"+(state[1]+1));
 		}
 		else if (state[0] == "spor")
 		{
